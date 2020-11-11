@@ -48,6 +48,7 @@ header h3 {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	position: relative;
 
 }
 
@@ -68,6 +69,26 @@ header h3 {
 
 #nav_menu a.current {
 	color: yellow;
+}
+
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+
+#nav_menu ul ul li {
+	float: none;
+}
+
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
 }
 /* the styles for the section */
 main {
